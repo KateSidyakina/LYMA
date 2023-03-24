@@ -63,6 +63,12 @@
             <a class="menu__link menu__link--black" href="#">Buy</a>
           </li>
         </ul>
+
+        <div class="burger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
 
@@ -167,19 +173,16 @@
       </section>
 
       <section class="quotes">
-        <!-- Slider main container -->
         <div class="swiper">
-          <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
-            <!-- Slides -->
             <div class="swiper-slide">
               <blockquote class="quotes__text">
                 “Your one stop solution to feeling energised and focused.”
               </blockquote>
               <div class="quotes__img">
                 <img
-                  width="284"
-                  height="70"
+                  width="210"
+                  height="55"
                   src="./img/quotes/forbes.svg"
                   alt="Forbes"
                 />
@@ -192,8 +195,8 @@
               </blockquote>
               <div class="quotes__img">
                 <img
-                  width="284"
-                  height="70"
+                  width="210"
+                  height="55"
                   src="./img/quotes/the-daily-telegraph.svg"
                   alt="The Daily Telegraph"
                 />
@@ -205,8 +208,8 @@
               </blockquote>
               <div class="quotes__img">
                 <img
-                  width="284"
-                  height="70"
+                  width="210"
+                  height="55"
                   src="./img/quotes/financial-times.svg"
                   alt="Financial Times"
                 />
@@ -218,8 +221,8 @@
               </blockquote>
               <div class="quotes__img">
                 <img
-                  width="284"
-                  height="70"
+                  width="210"
+                  height="55"
                   src="./img/quotes/daily-mail.svg"
                   alt="Daily Mail"
                 />
@@ -232,8 +235,8 @@
               </blockquote>
               <div class="quotes__img">
                 <img
-                  width="284"
-                  height="70"
+                  width="210"
+                  height="55"
                   src="./img/quotes/vogue.svg"
                   alt="Vogue"
                 />
@@ -245,8 +248,8 @@
               </blockquote>
               <div class="quotes__img">
                 <img
-                  width="284"
-                  height="70"
+                  width="210"
+                  height="55"
                   src="./img/quotes/forbes.svg"
                   alt="Forbes"
                 />
@@ -259,8 +262,8 @@
               </blockquote>
               <div class="quotes__img">
                 <img
-                  width="284"
-                  height="70"
+                  width="210"
+                  height="55"
                   src="./img/quotes/the-daily-telegraph.svg"
                   alt="The Daily Telegraph"
                 />
@@ -272,8 +275,8 @@
               </blockquote>
               <div class="quotes__img">
                 <img
-                  width="284"
-                  height="70"
+                  width="210"
+                  height="55"
                   src="./img/quotes/financial-times.svg"
                   alt="Financial Times"
                 />
@@ -285,15 +288,14 @@
               </blockquote>
               <div class="quotes__img">
                 <img
-                  width="284"
-                  height="70"
+                  width="210"
+                  height="55"
                   src="./img/quotes/daily-mail.svg"
                   alt="Daily Mail"
                 />
               </div>
             </div>
           </div>
-          <!-- If we need pagination -->
           <div class="swiper-pagination"></div>
         </div>
       </section>
@@ -494,12 +496,30 @@
       const swiper = new Swiper(".swiper", {
         loop: true,
         slidesPerView: 3.8,
+        breakpoints: {
+          1201: {
+            slidesPerView: 3.7,
+          },
+          993: {
+            slidesPerView: 3.6,
+          },
+          769: {
+            slidesPerView: 3,
+          },
+          577: {
+            slidesPerView: 2,
+            centeredSlides: false,
+          },
+          361: {
+            slidesPerView: 1,
+            centeredSlides: false,
+          },
+        },
         centeredSlides: true,
         autoplay: {
           delay: 3000,
         },
 
-        // If we need pagination
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
